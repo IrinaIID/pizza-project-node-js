@@ -1,13 +1,13 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import Fastify from 'fastify';
-import { healthCheckController } from './healthcheck.controller.js';
+import { HealthCheckController } from './healthcheck.controller.js';
 
 describe('HealthCheckController', () => {
   let app: ReturnType<typeof Fastify>;
 
   beforeAll(async () => {
     app = Fastify();
-    await app.register(healthCheckController);
+    await app.register(HealthCheckController);
     await app.ready();
   });
 

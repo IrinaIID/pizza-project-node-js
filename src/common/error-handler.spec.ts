@@ -41,7 +41,8 @@ describe('errorHandler', () => {
     expect(response.statusCode).toBe(400);
     expect(response.json()).toEqual({
       error: 'Validation error',
-      details: expect.any(String),
+      code: 'ZOD_ERROR',
+      details: expect.any(Array),
     });
   });
 
@@ -54,6 +55,7 @@ describe('errorHandler', () => {
     expect(response.statusCode).toBe(500);
     expect(response.json()).toEqual({
       error: 'Internal Server Error',
+      code: 'INTERNAL_ERROR',
     });
   });
 });
