@@ -1,0 +1,21 @@
+{
+  "lt": {
+    "a": {
+      "workingHours": { "start": 8, "end": 17 },
+      "minUnits": 10,
+      "maxUnits": 1000
+    },
+    "b": {
+      "workingHours": { "start": 6, "end": 22 },
+      "minUnits": 5,
+      "maxUnits": 2000
+    }
+  },
+  "pl": {
+    "a": {
+      "workingHours": { "start": 9, "end": 18 },
+      "minUnits": 20,
+      "maxUnits": 1500
+    }
+  }
+}
