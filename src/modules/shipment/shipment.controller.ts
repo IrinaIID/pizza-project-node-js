@@ -27,4 +27,19 @@ export async function ShipmentController(app: FastifyInstance) {
       return reply.send(result);
     },
   );
+
+  app.post('/ingredients/check', async (request) => {
+    const body = request.body as {
+      ingredients: {
+        ingredientId: string;
+        units: number;
+      }[];
+    };
+
+    const available = body.ingredients.every((i) => i.units <= 100);
+
+    return {
+      available,
+    };
+  });
 }

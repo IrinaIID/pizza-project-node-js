@@ -30,6 +30,9 @@ importers:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.1.0)
+      '@pizza/api-contracts':
+        specifier: workspace:*
+        version: link:packages/api-contracts
       '@types/node':
         specifier: ^25.5.0
         version: 25.5.0
@@ -63,6 +66,8 @@ importers:
       vitest:
         specifier: ^3.2.0
         version: 3.2.0(@types/node@25.5.0)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3)
+
+  packages/api-contracts: {}
 
 packages:
 
