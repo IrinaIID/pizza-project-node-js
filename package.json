@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "dev": "tsx watch src/app.ts",
     "build": "tsc",
@@ -26,6 +30,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@pizza/api-contracts": "workspace:*",
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.5.0",
     "@types/pg": "^8.20.0",
