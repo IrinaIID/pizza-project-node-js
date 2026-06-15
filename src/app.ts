@@ -6,6 +6,8 @@ import { errorHandler } from './common/error-handler.js';
 import { ShipmentController } from './modules/shipment/shipment.controller.js';
 import { PizzaOrderingController } from './modules/pizza-ordering/pizza-ordering.controller.js';
 import { PizzaProductionController } from './modules/pizza-production/pizza-production.controller.js';
+import './jobs/shipment.expiration.job.js';
+import './jobs/order.stale.job.js';
 
 export const app = Fastify({
   logger: true,
